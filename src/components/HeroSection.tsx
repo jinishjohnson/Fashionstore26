@@ -93,6 +93,7 @@ export default function HeroSection() {
                   alt={`${slides[currentSlide].title1} ${slides[currentSlide].title2} - Fashion Model`}
                   fill
                   priority
+                  sizes="(max-width: 768px) 100vw, 80vw"
                   className="object-contain object-bottom"
                 />
               </motion.div>

@@ -32,7 +32,7 @@ export default function OfferSection() {
           initial={{ opacity: 0, y: 150 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ type: "spring", stiffness: 50, delay: 0.2 }}
-          className="flex-1 max-w-md relative z-20"
+          className="flex-1 w-full max-w-md relative z-20"
         >
           <motion.div
             animate={{ y: [0, -15, 0] }}
@@ -43,7 +43,8 @@ export default function OfferSection() {
               src="/asset/fashion-shopping-beauty-7c773a5cd062f6b74bed23aacb06a21c (1).png"
               alt="Shop Your Size"
               fill
-              className="object-contain object-top translate-y-20 md:-translate-y-40 drop-shadow-[0_20px_30px_rgba(0,0,0,0.3)] scale-125 md:scale-175"
+              sizes="(max-width: 768px) 100vw, 500px"
+              className="object-contain object-center md:object-top md:-translate-y-40 drop-shadow-[0_20px_30px_rgba(0,0,0,0.3)] scale-110 md:scale-175"
             />
           </motion.div>
         </motion.div>
