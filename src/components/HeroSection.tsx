@@ -63,12 +63,13 @@ export default function HeroSection() {
       <section ref={containerRef} className={`relative h-[85vh] min-h-[600px] max-h-[900px] w-[98%] max-w-[1600px] overflow-hidden ${slides[currentSlide].bgColor} flex flex-col items-center shadow-xl justify-center transition-colors duration-600 rounded-[1.5rem]`}>
 
         {/* Background Text */}
-        <h1
+        <div
           ref={textRef}
+          aria-hidden="true"
           className="absolute top-[45%] left-[2vw] w-full text-center text-[10vw] sm:text-[10vw] lg:text-[10vw] font-black text-black tracking-wide pointer-events-none select-none z-10 whitespace-nowrap"
         >
           {slides[currentSlide].bgText}
-        </h1>
+        </div>
 
         <div className="relative w-full h-full z-20">
           <AnimatePresence mode="wait">
@@ -89,7 +90,7 @@ export default function HeroSection() {
               >
                 <Image
                   src={slides[currentSlide].image}
-                  alt="Hero"
+                  alt={`${slides[currentSlide].title1} ${slides[currentSlide].title2} - Fashion Model`}
                   fill
                   priority
                   className="object-contain object-bottom"
@@ -104,12 +105,12 @@ export default function HeroSection() {
                   transition={{ delay: 0.3, duration: 0.8 }}
                   className="pointer-events-auto"
                 >
-                  <h2 className="text-5xl md:text-[2.5rem] lg:text-[2rem] xl:text-[2.7rem] font-black leading-[0.95] tracking-tight">
+                  <h1 className="text-5xl md:text-[2.5rem] lg:text-[2rem] xl:text-[2.7rem] font-black leading-[0.95] tracking-tight">
                     <span className="block text-[#f91054]">{slides[currentSlide].title1}</span>
                     <span className="block text-[#f91054]">{slides[currentSlide].title2}</span>
                     <span className="block text-[#ff6b00]">{slides[currentSlide].title3}</span>
                     <span className="block text-[#f91054]">{slides[currentSlide].title4}</span>
-                  </h2>
+                  </h1>
 
                   <motion.button
                     initial={{ y: 20, opacity: 0 }}
